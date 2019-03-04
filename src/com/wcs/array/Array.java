@@ -126,7 +126,11 @@ public class Array<E> {
         size--;
         //改成泛型后，data[size]虽然用户访问不到，但是还存在着一个引用，无法被GC回收
         data[size] = null;
-        if (size == data.length / 2) {
+        //扩容的时候，是不够了，马上扩充为当前容量的两倍；
+        //但是缩减容量的时候，不马上缩减为1/2；
+        //因为当容量为8时，下一步操作为增加，删除，增加，删除，会频繁的触发扩容和缩容操作；
+        //所以优化成，当持续进行删除操作时，才进行缩容，缩容后的空间依然多出来一半未使用。
+        if (size == data.length / 4 && data.length / 2 != 0) {
             resize(data.length / 2);
         }
         return ret;
