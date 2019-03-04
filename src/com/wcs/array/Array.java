@@ -126,6 +126,9 @@ public class Array<E> {
         size--;
         //改成泛型后，data[size]虽然用户访问不到，但是还存在着一个引用，无法被GC回收
         data[size] = null;
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
         return ret;
     }
 
