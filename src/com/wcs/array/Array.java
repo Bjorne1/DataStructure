@@ -136,6 +136,14 @@ public class Array<E> {
         return ret;
     }
 
+    public E removeFirst() {
+        return remove(0);
+    }
+
+    public E removeLast() {
+        return remove(size - 1);
+    }
+
     /**
      * 删除指定元素，并返回其所在索引
      *
