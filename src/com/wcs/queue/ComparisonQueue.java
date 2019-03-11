@@ -2,7 +2,7 @@ package com.wcs.queue;
 
 import java.util.Random;
 
-public class Comparison {
+public class ComparisonQueue {
 
     /**
      * 测试使用q运行opCount个enqueueu和dequeue操作所需要的时间，单位：秒
