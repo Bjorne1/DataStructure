@@ -2,7 +2,7 @@ package com.wcs.linkedlist;
 
 /**
  * @Description: 链表
- * 时间复杂度分析：增删改查都是O(N)级别的，但是增，删，查，第一个位置上O(1)级别的
+ * 时间复杂度分析：增删改查都是O(N)级别的，但是增，删，查，在链表头上进行增删查是O(1)级别的
  * @Author: WenChangSheng
  * @Date: Created in 2019/3/11 11:50
  */
