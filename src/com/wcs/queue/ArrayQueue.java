@@ -4,7 +4,8 @@ import com.wcs.array.Array;
 
 /**
  * @Description: 基于数组实现的队列
- * 时间复杂度分析：dequeue() 是O(N)级别的，每一次出队，都将进行n次操作(与数据的数量相关)。
+ * 时间复杂度分析：dequeue() 是O(N)级别的，每一次出队，都将进行n次操作
+ * (当前的数组实现是，每移出一个数据，后面的数据都需要向前挪一位)。
  * @Author: WenChangSheng
  * @Date: Created in 2019/3/11 9:38
  */
