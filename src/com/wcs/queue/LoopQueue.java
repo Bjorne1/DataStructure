@@ -6,8 +6,8 @@ import com.wcs.array.Array;
  * @Description: 循环队列
  * 1.有一个空的位置
  * 2. 0,1,2,3,4,5    假设0,1,2,3个装了一个元素,当0,1中的数据移除后,再添加数据时,数据添加到0中；
- *                      再次添加时,触发扩容操作,不能添加到1中,如果添加到1中,tail将移动到后一个空的位置,
- *                      而2已经有数据并且为front。
+ * 再次添加时,触发扩容操作,不能添加到1中,如果添加到1中,tail将移动到后一个空的位置,
+ * 而2已经有数据并且为front。
  * @Author: WenChangSheng
  * @Date: Created in 2019/3/11 10:10
  */
@@ -52,7 +52,7 @@ public class LoopQueue<E> implements Queue<E> {
 
     private void resize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity + 1];
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < size; i++) {
             newData[i] = data[(i + front) % data.length];
         }
         data = newData;
