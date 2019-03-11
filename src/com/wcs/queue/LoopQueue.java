@@ -3,7 +3,7 @@ package com.wcs.queue;
 import com.wcs.array.Array;
 
 /**
- * @Description: 循环队列
+ * @Description: 循环队列, 均摊复杂度是O(1) resize()是O(N),但不是每次操作都除非resize()
  * 1.有一个空的位置
  * 2. 0,1,2,3,4,5    假设0,1,2,3个装了一个元素,当0,1中的数据移除后,再添加数据时,数据添加到0中；
  * 再次添加时,触发扩容操作,不能添加到1中,如果添加到1中,tail将移动到后一个空的位置,

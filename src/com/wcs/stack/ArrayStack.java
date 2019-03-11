@@ -3,7 +3,7 @@ package com.wcs.stack;
 import com.wcs.array.Array;
 
 /**
- * @Description: 基于数组实现栈
+ * @Description: 基于数组实现栈, 时间复杂度是O(1)级别
  * @Author: WenChangSheng
  * @Date: Created in 2019/3/7 11:09
  */
