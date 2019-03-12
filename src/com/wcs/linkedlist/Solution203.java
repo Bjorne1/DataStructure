@@ -45,7 +45,7 @@ public class Solution203 {
     }
 
     /**
-     * 解决方式二
+     * 解决方式二：利用虚拟头节点
      *
      * @param head
      * @param val
@@ -67,6 +67,23 @@ public class Solution203 {
         }
 
         return dummyHead.next;
+    }
+
+    /**
+     * 解决方式三：使用递归
+     *
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements3(ListNode head, int val) {
+
+        if (head == null) {
+            return head;
+        }
+
+        head.next = removeElements(head.next, val);
+        return head.val == val ? head.next : head;
     }
 
     public class ListNode {
