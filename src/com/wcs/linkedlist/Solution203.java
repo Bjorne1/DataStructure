@@ -82,7 +82,7 @@ public class Solution203 {
             return head;
         }
 
-        head.next = removeElements(head.next, val);
+        head.next = removeElements3(head.next, val);
         return head.val == val ? head.next : head;
     }
 
